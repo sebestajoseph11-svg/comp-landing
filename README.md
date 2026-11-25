@@ -5,8 +5,15 @@ Frontend landing site for **Feltworks**: a software + game studio that deploys p
 ## Stack
 
 - Vite + React
-- CSS Modules
+- Tailwind CSS, with a stylesheet beside each component and page
 - No backend (contact form is a local placeholder)
+
+## Layout
+
+- `src/components/ui` — reusable pieces (Button, Modal, TextField) and their CSS
+- `src/components/layout` — header and footer shared by every page
+- `src/pages` — one folder per page. Home sections live in `src/pages/home/sections`
+- `src/hooks`, `src/styles`, `src/brand.js`
 
 ## Rename the brand
 

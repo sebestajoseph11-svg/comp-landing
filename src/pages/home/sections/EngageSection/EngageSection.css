@@ -1,0 +1,5 @@
+.engage-section {
+  background:
+    radial-gradient(50% 40% at 0% 100%, rgba(184, 160, 120, 0.08), transparent 55%),
+    var(--color-ink);
+}

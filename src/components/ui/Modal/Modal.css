@@ -1,0 +1,36 @@
+.ui-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgb(12 22 20 / 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.ui-modal__panel {
+  width: min(32rem, 100%);
+  border: 1px solid var(--color-line);
+  border-radius: 1.25rem;
+  background: var(--color-ink-elevated);
+  padding: 1.5rem;
+  outline: none;
+}
+
+.ui-modal--fullscreen {
+  display: block;
+  padding: 6rem 1.5rem 2rem;
+  background: rgb(12 22 20 / 0.96);
+  backdrop-filter: blur(20px);
+}
+
+.ui-modal__panel--fullscreen {
+  width: auto;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}

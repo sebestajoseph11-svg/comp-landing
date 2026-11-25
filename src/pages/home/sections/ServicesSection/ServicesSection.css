@@ -1,0 +1,21 @@
+.services-section {
+  background: linear-gradient(180deg, var(--color-ink-elevated), var(--color-ink));
+}
+
+.service-point {
+  position: relative;
+  padding-left: 0.9rem;
+  color: var(--color-parchment-soft);
+  font-size: 0.9375rem;
+}
+
+.service-point::before {
+  content: '';
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--color-seafoam);
+}
