@@ -1,0 +1,111 @@
+:root {
+  --ink: #0c1614;
+  --ink-elevated: #121f1c;
+  --mist: #1a2a26;
+  --fog: #243832;
+  --line: rgba(230, 239, 233, 0.08);
+  --parchment: #e6efe9;
+  --parchment-soft: rgba(230, 239, 233, 0.72);
+  --muted: #8aa399;
+  --seafoam: #6eb89a;
+  --seafoam-bright: #8fd4b8;
+  --seafoam-dim: rgba(110, 184, 154, 0.14);
+  --brass: #b8a078;
+  --brass-dim: rgba(184, 160, 120, 0.18);
+  --danger-soft: #c47a6a;
+
+  --font-display: 'Bricolage Grotesque', Georgia, serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 6rem;
+  --space-3xl: 9rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+
+  --max: 72rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--parchment);
+  background: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+p {
+  margin: 0;
+}
+
+::selection {
+  background: var(--seafoam-dim);
+  color: var(--parchment);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
