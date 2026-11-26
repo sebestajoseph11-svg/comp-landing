@@ -7,6 +7,7 @@ import './SiteHeader.css'
 
 const links = [
   { href: '#about', label: 'About' },
+  { href: '#studio', label: 'Studio' },
   { href: '#services', label: 'Services' },
   { href: '#engage', label: 'Engage' },
   { href: '#work', label: 'Work' },
@@ -43,7 +44,7 @@ export default function SiteHeader() {
           <span className="font-display text-[1.15rem] font-semibold tracking-[-0.03em]">{brand.name}</span>
         </a>
 
-        <nav className="ml-auto hidden items-center gap-7 nav:flex" aria-label="Primary">
+        <nav className="ml-auto hidden items-center gap-5 nav:flex" aria-label="Primary">
           {links.map((link) => (
             <a
               key={link.href}

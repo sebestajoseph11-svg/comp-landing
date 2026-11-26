@@ -1,5 +1,6 @@
 import AboutSection from './sections/AboutSection/AboutSection'
 import ContactSection from './sections/ContactSection/ContactSection'
+import StudioSection from './sections/StudioSection/StudioSection'
 import EngageSection from './sections/EngageSection/EngageSection'
 import HeroSection from './sections/HeroSection/HeroSection'
 import ServicesSection from './sections/ServicesSection/ServicesSection'
@@ -12,6 +13,7 @@ export default function HomePage() {
     <main className="home-page">
       <HeroSection />
       <AboutSection />
+      <StudioSection />
       <ServicesSection />
       <EngageSection />
       <WorkSection />

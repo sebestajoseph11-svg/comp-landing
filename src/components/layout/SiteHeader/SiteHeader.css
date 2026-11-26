@@ -11,7 +11,7 @@
 
 .site-header.is-scrolled {
   border-bottom-color: var(--color-line);
-  background: rgb(12 22 20 / 0.78);
+  background: rgb(9 9 9 / 0.82);
   backdrop-filter: blur(16px);
 }
 

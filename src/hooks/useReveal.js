@@ -6,16 +6,13 @@ export function useReveal() {
 
   useEffect(() => {
     const node = ref.current
-    if (!node) return
+    if (!node) return undefined
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.disconnect()
-        }
+        setVisible(entry.isIntersecting)
       },
-      { threshold: 0.16, rootMargin: '0px 0px -8% 0px' },
+      { threshold: 0 },
     )
 
     observer.observe(node)

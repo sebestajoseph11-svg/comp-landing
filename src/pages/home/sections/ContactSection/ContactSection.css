@@ -1,5 +1,5 @@
 .contact-section {
-  background: #0c1614;
+  background: #090909;
 }
 
 .contact-atmosphere {
@@ -7,7 +7,7 @@
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(70% 60% at 80% 20%, rgba(110, 184, 154, 0.16), transparent 55%),
-    radial-gradient(50% 50% at 10% 90%, rgba(184, 160, 120, 0.1), transparent 50%),
-    linear-gradient(180deg, #0f1c19, #0c1614 60%);
+    radial-gradient(70% 60% at 80% 20%, rgba(255, 255, 255, 0.08), transparent 55%),
+    radial-gradient(50% 50% at 10% 90%, rgba(255, 255, 255, 0.04), transparent 50%),
+    linear-gradient(180deg, #121212, #090909 60%);
 }

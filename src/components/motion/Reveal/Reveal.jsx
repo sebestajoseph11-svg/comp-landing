@@ -8,6 +8,7 @@ const variants = {
   up: 'reveal--up',
   lift: 'reveal--lift',
   drift: 'reveal--drift',
+  sweep: 'reveal--sweep',
 }
 
 export default function Reveal({ children, className, delay = 0, variant = 'up' }) {
@@ -17,7 +18,7 @@ export default function Reveal({ children, className, delay = 0, variant = 'up' 
     <div
       ref={ref}
       className={cn('reveal', variants[variant], visible && 'is-visible', className)}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={visible ? { animationDelay: `${delay}ms` } : undefined}
     >
       {children}
     </div>
