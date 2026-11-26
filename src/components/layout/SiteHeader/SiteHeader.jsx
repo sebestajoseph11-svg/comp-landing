@@ -8,12 +8,12 @@ import Modal from '../../ui/Modal/Modal'
 import './SiteHeader.css'
 
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#studio', label: 'Studio' },
-  { href: '#services', label: 'Services' },
-  { href: '#engage', label: 'Engage' },
-  { href: '#work', label: 'Work' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#about', label: 'Why play' },
+  { href: '#studio', label: 'Floor' },
+  { href: '#services', label: 'Games' },
+  { href: '#engage', label: 'Rounds' },
+  { href: '#work', label: 'Live' },
+  { href: '#contact', label: 'Join' },
 ]
 
 const sectionIds = links.map((link) => link.href.slice(1))

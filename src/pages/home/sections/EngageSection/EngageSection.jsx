@@ -4,16 +4,16 @@ import './EngageSection.css'
 
 const modes = [
   {
-    title: 'Build with us',
-    body: 'A focused engagement to design and ship a product or playable surface from blank slate to launch.',
+    title: 'Open a table',
+    body: 'Pick Crash, Limbo, or another game on the floor. The round starts as soon as you do.',
   },
   {
-    title: 'Extend your team',
-    body: 'Embed our engineers and designers beside yours — same cadence, shared ownership, no agency theater.',
+    title: 'Bet play-money',
+    body: 'Your balance is soft currency. Climb, cash out, and keep it on Feltworks. No cash wager.',
   },
   {
-    title: 'Run as a service',
-    body: 'We host and operate your play-money game or software product with monitoring, updates, and a clear SLA.',
+    title: 'Come back for the next one',
+    body: 'The floor stays open. Same account, a new round, and the wallet you already have.',
   },
 ]
 
@@ -23,8 +23,8 @@ export default function EngageSection() {
       <div className="mx-auto max-w-6xl">
         <Reveal variant="left">
           <SectionHeader
-            kicker="Engagement"
-            title="Partnership shapes that stay out of the way."
+            kicker="Rounds"
+            title="Sit down. Play one. Stay if you want."
             titleId="engage-title"
           />
         </Reveal>

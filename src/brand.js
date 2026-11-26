@@ -5,7 +5,7 @@
 export const brand = {
   name: 'Feltworks',
   legalName: 'Feltworks Studio',
-  tagline: 'Software and play-money games, deployed as a service.',
+  tagline: 'Play-money games. Crash, Limbo, and the rest of the table.',
   email: 'hello@feltworks.studio',
   emails: ['hello@feltworks.studio', 'businessnane22@outlook.com'],
   phone: '+852 2819 4736',

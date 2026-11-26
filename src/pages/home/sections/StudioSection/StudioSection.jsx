@@ -10,25 +10,25 @@ const moments = [
   {
     src: support,
     name: 'Support',
-    note: 'Live help',
+    note: 'In the round',
     alt: 'Two people at an office desk, one wearing a headset and looking at a monitor',
   },
   {
     src: meeting,
-    name: 'Meeting',
-    note: 'With partners',
+    name: 'Hosts',
+    note: 'On the floor',
     alt: 'Two people talking at a worn table beside a window',
   },
   {
     src: build,
-    name: 'Build',
-    note: 'The work',
+    name: 'Play',
+    note: 'Your round',
     alt: 'Two people working together at a laptop in an office',
   },
   {
     src: team,
-    name: 'Team',
-    note: 'The studio',
+    name: 'Players',
+    note: 'The room',
     alt: 'Three colleagues standing together in an office hallway',
   },
 ]
@@ -41,11 +41,11 @@ export default function StudioSection() {
       <div className="mx-auto max-w-6xl">
         <Reveal variant="left">
           <SectionHeader
-            kicker="Studio"
-            title="The people are the table."
+            kicker="The floor"
+            title="Someone is at the table with you."
             titleId="studio-title"
             titleClassName="section-title--wide"
-            lede="Feltworks is a small studio of engineers, designers, and operators. We do not pass your product through a rotating bench. The same people who cut the first build stay for the service — the felt, the rules, and the quiet hours after launch."
+            lede="Players, hosts, and the people who keep Feltworks live. The same floor that opens Crash stays for the question after a round — the rules, the wallet, and the next game."
           />
         </Reveal>
 

@@ -5,15 +5,15 @@ import './TestimonialsSection.css'
 const quotes = [
   {
     quote:
-      'Feltworks treated our play-money rooms like a product, not a weekend build. Launch was calm. The weeks after were calmer.',
-    name: 'Maya Chen',
-    role: 'Head of Product, Northline Leisure',
+      'I came for one Crash round and stayed for Limbo. I set the target. The result is instant. The wallet is the same on both.',
+    name: 'Alex Mora',
+    role: 'Plays Crash',
   },
   {
     quote:
-      'They shipped the game and stayed for the service layer — ledgers, ops, the boring parts that keep players trusting the table.',
-    name: 'Jonas Reid',
-    role: 'Founder, Drift Collective',
+      'Play-money, but the rounds feel sharp. I can read the rule before I bet, and I do not have to learn a new balance for every game.',
+    name: 'Priya Shah',
+    role: 'Plays Limbo',
   },
 ]
 
@@ -23,8 +23,8 @@ export default function TestimonialsSection() {
       <div className="mx-auto max-w-6xl">
         <Reveal variant="left">
           <SectionHeader
-            kicker="Proof"
-            title="Quiet confidence from partners who stayed."
+            kicker="Players"
+            title="What people say after they stay."
             titleId="proof-title"
           />
         </Reveal>

@@ -4,19 +4,19 @@ import './SiteFooter.css'
 
 const columns = [
   {
-    title: 'Studio',
+    title: 'Floor',
     links: [
-      { href: '#about', label: 'About' },
-      { href: '#studio', label: 'Studio' },
-      { href: '#services', label: 'Services' },
-      { href: '#engage', label: 'Engage' },
-      { href: '#work', label: 'Work' },
+      { href: '#about', label: 'Why play' },
+      { href: '#studio', label: 'Floor' },
+      { href: '#services', label: 'Games' },
+      { href: '#engage', label: 'Rounds' },
+      { href: '#work', label: 'Live' },
     ],
   },
   {
-    title: 'Contact',
+    title: 'Join',
     links: [
-      { href: '#contact', label: 'Start a project' },
+      { href: '#contact', label: 'Play now' },
       ...brand.emails.map((email) => ({ href: `mailto:${email}`, label: email, email })),
     ],
   },
@@ -69,9 +69,9 @@ export default function SiteFooter() {
 
       <div className="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-line pt-5 text-[0.8125rem] text-muted">
         <p>
-          © {year} {brand.legalName}. All rights reserved.
+          © {year} {brand.name}. All rights reserved.
         </p>
-        <p>Play-money games, hosted in Hong Kong.</p>
+        <p>Play-money only. No cash wager.</p>
       </div>
     </footer>
   )

@@ -1,3 +1,7 @@
+#top {
+  padding-top: 4.75rem;
+}
+
 .hero-atmosphere {
   position: absolute;
   inset: 0;
@@ -43,6 +47,38 @@
     linear-gradient(180deg, transparent 0%, rgba(12, 12, 12, 0.88) 35%, #0a0a0a 100%);
   transform: perspective(900px) rotateX(48deg);
   transform-origin: center top;
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(5 5 5 / 0.62) 0%, rgb(5 5 5 / 0.18) 16%, transparent 32%);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  padding-top: 2.75rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero-chip,
+.hero-arc {
+  display: none;
 }
 
 .hero-chip {
@@ -100,9 +136,38 @@
 }
 
 @media (min-width: 55rem) {
-  .hero-chip {
-    top: 32%;
-    right: 22%;
+  #top {
+    padding-top: 0;
+  }
+
+  .hero-visual {
+    container-type: inline-size;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    height: calc(50cqw + 50px);
+    max-height: calc(100svh - 8rem + 50px);
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-visual::after {
+    background:
+      linear-gradient(180deg, rgb(5 5 5 / 0.7) 0%, rgb(5 5 5 / 0.22) 10%, transparent 20%),
+      linear-gradient(90deg, rgb(5 5 5 / 0.72) 0%, rgb(5 5 5 / 0.32) 22%, transparent 48%);
+  }
+
+  .hero-copy {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 72rem;
+    height: 100%;
+    padding-top: 4.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 

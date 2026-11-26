@@ -4,19 +4,19 @@ import './ServicesSection.css'
 
 const services = [
   {
-    name: 'Software systems',
-    summary: 'Operator dashboards, APIs, and product surfaces with quiet reliability and deliberate UX.',
-    points: ['Product engineering', 'Platform & APIs', 'Design systems'],
+    name: 'Crash',
+    summary: 'A multiplier climbs in front of you. Cash out while it is still rising, or watch it break.',
+    points: ['Rising curve', 'Cash out anytime', 'Classic and Trenball'],
   },
   {
-    name: 'Game development',
-    summary: 'Playable loops for web and mobile — paced, instrumented, and ready for real traffic.',
-    points: ['Client experiences', 'Economy design', 'Live ops tooling'],
+    name: 'Limbo',
+    summary: 'Set a target. The rocket either clears it or it does not. One bet, one result.',
+    points: ['Pick your target', 'One-tap bet', 'Instant result'],
   },
   {
-    name: 'Play-money as a service',
-    summary: 'We deploy and host play-money games end-to-end: sessions, wallets in soft currency, and ops.',
-    points: ['Hosted deployment', 'Soft-currency ledgers', 'Monitoring & support'],
+    name: 'The rest of the floor',
+    summary: 'Dice, Coinflip, Mines, Wheel, and Plinko spend the same play-money wallet as Crash and Limbo.',
+    points: ['Dice', 'Coinflip', 'Mines and more'],
   },
 ]
 
@@ -26,11 +26,11 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-6xl">
         <Reveal variant="right">
           <SectionHeader
-            kicker="Services"
-            title="Three crafts. One continuous delivery surface."
+            kicker="Games"
+            title="Three ways in. One Feltworks wallet."
             titleId="services-title"
             titleClassName="section-title--wide"
-            lede="From greenfield builds to living services — choose a lane, or keep the whole stack with us."
+            lede="Start with Crash or Limbo, or open the rest of the floor. Every game spends the same play-money balance."
           />
         </Reveal>
 

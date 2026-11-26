@@ -17,5 +17,5 @@
   width: 0.35rem;
   height: 0.35rem;
   border-radius: 50%;
-  background: var(--color-seafoam);
+  background: currentColor;
 }

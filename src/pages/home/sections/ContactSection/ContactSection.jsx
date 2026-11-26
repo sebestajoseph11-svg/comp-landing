@@ -10,7 +10,7 @@ const initial = {
   name: '',
   email: '',
   company: '',
-  interest: 'Play-money deployment',
+  interest: 'Crash',
   message: '',
 }
 
@@ -21,7 +21,7 @@ function validate(values) {
   if (!values.name.trim()) next.name = 'Name is required.'
   if (!values.email.trim()) next.email = 'Email is required.'
   else if (!EMAIL_PATTERN.test(values.email.trim())) next.email = 'Enter a valid email address.'
-  if (!values.message.trim()) next.message = 'Project details are required.'
+  if (!values.message.trim()) next.message = 'Tell us which game you want.'
   return next
 }
 
@@ -64,13 +64,13 @@ export default function ContactSection() {
       <div className="relative mx-auto max-w-6xl">
         <Reveal variant="right">
           <SectionHeader
-            kicker="Start here"
-            title="Tell us what you want on the table."
+            kicker="Join"
+            title="Get a seat at Feltworks."
             titleId="contact-title"
             titleClassName="section-title--narrow"
             lede={
               <>
-                Frontend-only for now — this form captures intent locally. Email us at{' '}
+                Tell us which game you want first. Write{' '}
                 {brand.emails.map((email, index) => (
                   <span key={email}>
                     {index > 0 ? ' or ' : null}
@@ -79,7 +79,7 @@ export default function ContactSection() {
                     </a>
                   </span>
                 ))}{' '}
-                until backend invitations land.
+                and we will point you at the table.
               </>
             }
           />
@@ -88,9 +88,9 @@ export default function ContactSection() {
         <Reveal delay={140} variant="lift">
           {submitted ? (
             <div className="max-w-lg rounded-[1.25rem] border border-line bg-parchment/3 p-8" role="status">
-              <h3 className="mb-3 text-2xl">Thanks — we have your note.</h3>
+              <h3 className="mb-3 text-2xl">You are on the list.</h3>
               <p className="mb-5 text-muted">
-                Nothing was sent to a server yet. Reach{' '}
+                Email{' '}
                 {brand.emails.map((email, index) => (
                   <span key={email}>
                     {index > 0 ? ' or ' : null}
@@ -99,10 +99,10 @@ export default function ContactSection() {
                     </a>
                   </span>
                 ))}{' '}
-                directly if you want to move sooner.
+                if you want the link to the table tonight.
               </p>
               <Button type="button" onClick={reset}>
-                Write another
+                Send another
               </Button>
             </div>
           ) : (
@@ -141,8 +141,8 @@ export default function ContactSection() {
                 <TextField
                   id="contact-company"
                   name="company"
-                  label="Company"
-                  autoComplete="organization"
+                  label="Username"
+                  autoComplete="username"
                   value={form.company}
                   onChange={onChange}
                 />
@@ -150,14 +150,14 @@ export default function ContactSection() {
                   id="contact-interest"
                   name="interest"
                   as="select"
-                  label="Interest"
+                  label="First game"
                   value={form.interest}
                   onChange={onChange}
                 >
-                  <option>Play-money deployment</option>
-                  <option>Game development</option>
-                  <option>Software systems</option>
-                  <option>Team extension</option>
+                  <option>Crash</option>
+                  <option>Limbo</option>
+                  <option>Dice</option>
+                  <option>Coinflip</option>
                   <option>Not sure yet</option>
                 </TextField>
               </div>
@@ -165,18 +165,18 @@ export default function ContactSection() {
                 id="contact-message"
                 name="message"
                 as="textarea"
-                label="Project details"
+                label="What do you want to play"
                 rows={5}
                 value={form.message}
                 onChange={onChange}
-                placeholder="What are you building, and when do you want it live?"
+                placeholder="Crash, Limbo, or the whole floor — and when you want in."
                 required
                 aria-required="true"
                 error={errors.message}
               />
               <div className="mt-2 flex flex-wrap items-center gap-4">
-                <Button type="submit">Send interest</Button>
-                <p className="text-sm text-muted">No spam. No account required.</p>
+                <Button type="submit">Request a seat</Button>
+                <p className="text-sm text-muted">Play-money only. No cash deposit.</p>
               </div>
             </form>
           )}

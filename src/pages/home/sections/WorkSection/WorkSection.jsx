@@ -1,31 +1,31 @@
-import crash from '../../../../assets/work/crash.jpg'
-import limbo from '../../../../assets/work/limbo.jpg'
-import lobby from '../../../../assets/work/lobby.jpg'
+import crash from '../../../../assets/work/crash-feltworks.jpg'
+import limbo from '../../../../assets/work/limbo-bills.jpg'
+import lobby from '../../../../assets/work/lobby-start.jpg'
 import Reveal from '../../../../components/motion/Reveal/Reveal'
 import SectionHeader from '../../../../components/ui/SectionHeader/SectionHeader'
 import './WorkSection.css'
 
 const projects = [
   {
-    name: 'Tableline',
-    kind: 'Play-money casino suite',
-    note: 'Hosted multi-table rooms with soft-currency wallets and live ops console.',
+    name: 'Crash',
+    kind: 'The rising table',
+    note: 'Cash out before the curve breaks. A play-money Crash round on Feltworks.',
     src: crash,
-    alt: 'A man at a desk placing a bet on the Nemesis crash game',
+    alt: 'A man at a desk placing a bet on the Feltworks crash game',
   },
   {
-    name: 'Operator North',
-    kind: 'Software platform',
-    note: 'Internal tooling for content, fraud signals, and player support workflows.',
+    name: 'Limbo',
+    kind: 'Set the target',
+    note: 'A phone in one hand, a target of 50× on screen, and play-money in the other.',
     src: limbo,
-    alt: 'A woman holding a phone showing Limbo at a 50 target and a fan of US dollars',
+    alt: 'A woman holding a phone showing Limbo at a 50 target and a fan of US hundred-dollar bills',
   },
   {
-    name: 'Drift Poker',
-    kind: 'Game + service',
-    note: 'Browser poker with seasonal economies — deployed and monitored by Feltworks.',
+    name: 'The lobby',
+    kind: 'Where a session starts',
+    note: 'The Feltworks start page: the Crash multiplier, then the rest of the floor.',
     src: lobby,
-    alt: 'Several people standing in front of a television showing the Nemesis start page',
+    alt: 'Several people standing in front of a television showing the Feltworks start page',
   },
 ]
 
@@ -35,10 +35,10 @@ export default function WorkSection() {
       <div className="mx-auto max-w-6xl">
         <Reveal variant="right">
           <SectionHeader
-            kicker="Selected work"
-            title="Surfaces we have shaped and kept running."
+            kicker="Live"
+            title="This is the Feltworks floor."
             titleId="work-title"
-            lede="Placeholder case studies — replace with real launches when ready."
+            lede="Crash on a desk. Limbo in your hand. The lobby on a big screen. The games are the point."
           />
         </Reveal>
 

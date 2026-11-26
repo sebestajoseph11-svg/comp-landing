@@ -5,16 +5,16 @@ import './AboutSection.css'
 
 const pillars = [
   {
-    title: 'Craft over churn',
-    body: 'Fewer handoffs. Deeper ownership. Interfaces and systems that feel considered, not assembled.',
+    title: 'Fast rounds',
+    body: 'Crash and Limbo resolve in seconds. Sit down, play a round, and go again without a lobby full of waiting.',
   },
   {
-    title: 'Play with integrity',
-    body: 'Play-money products that respect the player — fair loops, clear rules, and calm operational floors.',
+    title: 'Rules in the open',
+    body: 'You see the multiplier, the target, and the odds before you bet. The table does not hide the round.',
   },
   {
-    title: 'Ship as a service',
-    body: 'We do not toss you a build. We host, observe, and evolve the product with you after launch.',
+    title: 'Play-money only',
+    body: 'One soft-currency wallet across every game. The climb is real. The wager is not cash.',
   },
 ]
 
