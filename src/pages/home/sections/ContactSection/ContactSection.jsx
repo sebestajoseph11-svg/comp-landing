@@ -71,9 +71,14 @@ export default function ContactSection() {
             lede={
               <>
                 Frontend-only for now — this form captures intent locally. Email us at{' '}
-                <a href={`mailto:${brand.email}`} className="text-seafoam-bright underline underline-offset-[0.2em]">
-                  {brand.email}
-                </a>{' '}
+                {brand.emails.map((email, index) => (
+                  <span key={email}>
+                    {index > 0 ? ' or ' : null}
+                    <a href={`mailto:${email}`} className="text-seafoam-bright underline underline-offset-[0.2em]">
+                      {email}
+                    </a>
+                  </span>
+                ))}{' '}
                 until backend invitations land.
               </>
             }
@@ -85,7 +90,16 @@ export default function ContactSection() {
             <div className="max-w-lg rounded-[1.25rem] border border-line bg-parchment/3 p-8" role="status">
               <h3 className="mb-3 text-2xl">Thanks — we have your note.</h3>
               <p className="mb-5 text-muted">
-                Nothing was sent to a server yet. Reach {brand.email} directly if you want to move sooner.
+                Nothing was sent to a server yet. Reach{' '}
+                {brand.emails.map((email, index) => (
+                  <span key={email}>
+                    {index > 0 ? ' or ' : null}
+                    <a href={`mailto:${email}`} className="text-seafoam-bright underline underline-offset-[0.2em]">
+                      {email}
+                    </a>
+                  </span>
+                ))}{' '}
+                directly if you want to move sooner.
               </p>
               <Button type="button" onClick={reset}>
                 Write another

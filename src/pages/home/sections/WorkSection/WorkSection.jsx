@@ -1,3 +1,6 @@
+import crash from '../../../../assets/work/crash.jpg'
+import limbo from '../../../../assets/work/limbo.jpg'
+import lobby from '../../../../assets/work/lobby.jpg'
 import Reveal from '../../../../components/motion/Reveal/Reveal'
 import SectionHeader from '../../../../components/ui/SectionHeader/SectionHeader'
 import './WorkSection.css'
@@ -7,19 +10,22 @@ const projects = [
     name: 'Tableline',
     kind: 'Play-money casino suite',
     note: 'Hosted multi-table rooms with soft-currency wallets and live ops console.',
-    tone: 'a',
+    src: crash,
+    alt: 'A man at a desk placing a bet on the Nemesis crash game',
   },
   {
     name: 'Operator North',
     kind: 'Software platform',
     note: 'Internal tooling for content, fraud signals, and player support workflows.',
-    tone: 'b',
+    src: limbo,
+    alt: 'A woman holding a phone showing Limbo at a 50 target and a fan of US dollars',
   },
   {
     name: 'Drift Poker',
     kind: 'Game + service',
     note: 'Browser poker with seasonal economies — deployed and monitored by Feltworks.',
-    tone: 'c',
+    src: lobby,
+    alt: 'Several people standing in front of a television showing the Nemesis start page',
   },
 ]
 
@@ -44,10 +50,9 @@ export default function WorkSection() {
               variant={index === 0 ? 'up' : index === 1 ? 'lift' : 'drift'}
               className={index === 0 ? 'wide:row-span-2' : undefined}
             >
-              <article className="grid h-full overflow-hidden rounded-[1.25rem] border border-line bg-ink">
-                <div className={`work-visual work-visual--${project.tone} ${index === 0 ? 'work-visual--lead' : ''}`} aria-hidden="true">
-                  <span className="work-orb" />
-                  <span className="work-ring" />
+              <article className="grid h-full grid-rows-[minmax(16rem,1fr)_auto] overflow-hidden rounded-[1.25rem] border border-line bg-ink">
+                <div className={`work-visual ${index === 0 ? 'work-visual--lead' : ''}`}>
+                  <img src={project.src} alt={project.alt} />
                 </div>
                 <div className="px-6 pt-6 pb-7">
                   <p className="mb-1.5 text-[0.8125rem] tracking-[0.04em] text-brass">{project.kind}</p>

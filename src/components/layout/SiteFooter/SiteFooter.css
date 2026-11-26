@@ -1,3 +1,42 @@
 .site-footer {
   background: var(--color-ink-deep);
 }
+
+.footer-studio {
+  max-width: 28rem;
+}
+
+.footer-place {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 1.15rem;
+  font-style: normal;
+}
+
+.footer-place a,
+.footer-place p {
+  color: var(--color-parchment-soft);
+  font-size: 0.975rem;
+}
+
+.footer-place a:hover {
+  color: var(--color-parchment);
+}
+
+.footer-map {
+  height: 11.5rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  background: var(--color-ink-elevated);
+}
+
+.footer-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  /* Google's embed is light-only. Invert and desaturate so land sits near ink and labels stay parchment. */
+  filter: grayscale(1) invert(1) contrast(1.45) brightness(0.62);
+}

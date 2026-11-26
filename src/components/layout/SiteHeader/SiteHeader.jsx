@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { brand } from '../../../brand'
+import { useActiveSection } from '../../../hooks/useActiveSection'
+import { cn } from '../../../lib/cn'
 import Button from '../../ui/Button/Button'
 import LogoMark from '../../ui/LogoMark/LogoMark'
 import Modal from '../../ui/Modal/Modal'
@@ -14,9 +16,12 @@ const links = [
   { href: '#contact', label: 'Contact' },
 ]
 
+const sectionIds = links.map((link) => link.href.slice(1))
+
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const active = useActiveSection(sectionIds)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -49,9 +54,11 @@ export default function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[0.9375rem] text-parchment-soft transition-colors duration-300 ease-brand hover:text-parchment"
+              data-label={link.label}
+              className={cn('nav-link', active === link.href.slice(1) && 'is-active')}
+              aria-current={active === link.href.slice(1) ? 'true' : undefined}
             >
-              {link.label}
+              <span>{link.label}</span>
             </a>
           ))}
         </nav>
@@ -78,7 +85,8 @@ export default function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="border-b border-line py-[0.65rem] font-display text-[1.75rem] font-medium tracking-[-0.03em]"
+              className={cn('nav-link nav-link--menu', active === link.href.slice(1) && 'is-active')}
+              aria-current={active === link.href.slice(1) ? 'true' : undefined}
               onClick={close}
             >
               {link.label}

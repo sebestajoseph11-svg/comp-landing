@@ -17,23 +17,36 @@ const columns = [
     title: 'Contact',
     links: [
       { href: '#contact', label: 'Start a project' },
-      { href: `mailto:${brand.email}`, label: brand.email },
+      ...brand.emails.map((email) => ({ href: `mailto:${email}`, label: email, email })),
     ],
   },
 ]
 
 const year = new Date().getFullYear()
+const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(brand.address)}&z=15&hl=en&output=embed`
 
 export default function SiteFooter() {
   return (
     <footer className="site-footer border-t border-line px-6 pt-24 pb-8">
       <div className="mx-auto grid max-w-6xl gap-10 desk:grid-cols-[1.2fr_1fr] desk:items-start">
-        <div className="max-w-xs">
+        <div className="footer-studio">
           <a href="#top" className="mb-3 inline-flex items-center gap-[0.65rem] font-display text-xl font-semibold tracking-[-0.03em]">
             <LogoMark size="sm" />
             <span>{brand.name}</span>
           </a>
-          <p className="text-[0.975rem] text-muted">{brand.tagline}</p>
+          <p className="max-w-xs text-[0.975rem] text-muted">{brand.tagline}</p>
+          <address className="footer-place">
+            <a href={`tel:${brand.phoneTel}`}>{brand.phone}</a>
+            <p>{brand.address}</p>
+          </address>
+          <div className="footer-map">
+            <iframe
+              title={`${brand.name} on Google Maps`}
+              src={mapSrc}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-6">
@@ -44,7 +57,7 @@ export default function SiteFooter() {
                 {column.links.map((link) => (
                   <li key={link.label}>
                     <a href={link.href} className="text-[0.975rem] text-parchment-soft transition-colors duration-200 ease-brand hover:text-parchment">
-                      {link.label}
+                      {link.email ? `${link.email.split('@')[0]}\u200b@${link.email.split('@')[1]}` : link.label}
                     </a>
                   </li>
                 ))}
@@ -58,9 +71,7 @@ export default function SiteFooter() {
         <p>
           © {year} {brand.legalName}. All rights reserved.
         </p>
-        <p>
-          Rename via <code className="font-mono text-[0.78rem] text-seafoam">src/brand.js</code>
-        </p>
+        <p>Play-money games, hosted in Hong Kong.</p>
       </div>
     </footer>
   )
