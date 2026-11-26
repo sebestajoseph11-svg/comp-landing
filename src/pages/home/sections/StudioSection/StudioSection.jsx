@@ -1,31 +1,35 @@
+import support from '../../../../assets/studio/support.png'
+import meeting from '../../../../assets/studio/meeting.png'
+import build from '../../../../assets/studio/build.png'
+import team from '../../../../assets/studio/team.png'
 import Reveal from '../../../../components/motion/Reveal/Reveal'
 import SectionHeader from '../../../../components/ui/SectionHeader/SectionHeader'
 import './StudioSection.css'
 
-const marks = [
+const moments = [
   {
-    src: '/studio/studio-felt.jpg',
-    name: 'Felt',
-    note: 'The surface',
-    alt: 'Close photograph of dark felt cloth',
+    src: support,
+    name: 'Support',
+    note: 'Live help',
+    alt: 'Two people at an office desk, one wearing a headset and looking at a monitor',
   },
   {
-    src: '/studio/studio-ring.jpg',
-    name: 'Ring',
-    note: 'The mark',
-    alt: 'A thin pale ring standing on a black table',
+    src: meeting,
+    name: 'Meeting',
+    note: 'With partners',
+    alt: 'Two people talking at a worn table beside a window',
   },
   {
-    src: '/studio/studio-chip.jpg',
-    name: 'Chip',
-    note: 'The stake',
-    alt: 'A plain white chip resting on black felt',
+    src: build,
+    name: 'Build',
+    note: 'The work',
+    alt: 'Two people working together at a laptop in an office',
   },
   {
-    src: '/studio/studio-hands.jpg',
-    name: 'Hands',
-    note: 'The people',
-    alt: 'Two hands resting at the edge of a dark felt table',
+    src: team,
+    name: 'Team',
+    note: 'The studio',
+    alt: 'Three colleagues standing together in an office hallway',
   },
 ]
 
@@ -46,14 +50,14 @@ export default function StudioSection() {
         </Reveal>
 
         <ul className="grid grid-cols-2 gap-4 desk:grid-cols-4 desk:gap-5">
-          {marks.map((mark, index) => (
-            <li key={mark.name}>
+          {moments.map((moment, index) => (
+            <li key={moment.name}>
               <Reveal variant={variants[index]} delay={index * 90}>
                 <figure className="studio-figure">
-                  <img src={mark.src} alt={mark.alt} />
+                  <img src={moment.src} alt={moment.alt} />
                   <figcaption>
-                    <span className="studio-name">{mark.name}</span>
-                    <span className="studio-note">{mark.note}</span>
+                    <span className="studio-name">{moment.name}</span>
+                    <span className="studio-note">{moment.note}</span>
                   </figcaption>
                 </figure>
               </Reveal>

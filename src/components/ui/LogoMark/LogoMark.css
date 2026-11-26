@@ -1,18 +1,40 @@
 .logo-mark {
   flex: none;
-  width: 1.35rem;
-  height: 1.35rem;
-  border: 1.5px solid var(--color-seafoam);
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 0 3.5px var(--color-ink),
-    inset 0 0 0 5.5px var(--color-brass);
+  width: auto;
+  height: 1.65rem;
+  object-fit: contain;
 }
 
 .logo-mark--sm {
-  width: 1.2rem;
-  height: 1.2rem;
-  box-shadow:
-    inset 0 0 0 3px var(--color-ink),
-    inset 0 0 0 5px var(--color-brass);
+  height: 1.35rem;
+}
+
+@media (min-width: 50rem) {
+  .logo-mark {
+    height: 1.9rem;
+  }
+
+  .logo-mark--sm {
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 55rem) {
+  .logo-mark {
+    height: 2.15rem;
+  }
+
+  .logo-mark--sm {
+    height: 1.65rem;
+  }
+}
+
+@media (min-width: 56.25rem) {
+  .logo-mark {
+    height: 2.45rem;
+  }
+
+  .logo-mark--sm {
+    height: 1.85rem;
+  }
 }
